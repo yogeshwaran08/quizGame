@@ -19,6 +19,8 @@ namespace quizGame
         int score;
         int percentage;
         int totalQuestions;
+        int timerSec = 0;
+        int MAX_TIME = 60;
 
 
         public Form1()
@@ -37,18 +39,21 @@ namespace quizGame
         {
 
             var senderObject = (Button)sender;
+            timerSec = 0;
 
 
             int buttonTag = Convert.ToInt32(senderObject.Tag);
-
-
-
-
             if (buttonTag == correctAnswer)
             {
                 score++;
 
             }
+            question();
+
+        }
+
+        private void question()
+        {
 
             if (questionNumber == totalQuestions)
             {
@@ -71,9 +76,6 @@ namespace quizGame
             questionNumber++;
 
             askQuestion(questionNumber);
-
-
-
         }
 
         private void askQuestion(int qnum)
@@ -148,58 +150,23 @@ namespace quizGame
                     correctAnswer = 3;
 
                     break;
-
-                case 6:
-
-
-                    lblQuestion.Text = "Whats the main characters name in this game?";
-
-                    button1.Text = "Python";
-                    button2.Text = "C++";
-                    button3.Text = "C";
-                    button4.Text = "Javascript";
-
-                    correctAnswer = 4;
-
-                    break;
-
-                case 7:
-
-
-                    lblQuestion.Text = "What is the name of this game";
-
-                    button1.Text = "Counter Strike Go";
-                    button2.Text = "Call of Duty";
-                    button3.Text = "Battlefield";
-                    button4.Text = "Half Life 3";
-
-                    correctAnswer = 1;
-
-                    break;
-
-                case 8:
-
-
-                    lblQuestion.Text = "Who is Geralt looking for in this game?";
-
-                    button1.Text = "Victoria";
-                    button2.Text = "Donuts";
-                    button3.Text = "Ciri";
-                    button4.Text = "Yennefer";
-
-                    correctAnswer = 3;
-
-                    break;
-
-
-
-
             }
-
-
-
 
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(timerSec <= MAX_TIME)
+            {
+                timerSec++; 
+            }
+            else
+            {
+                timerSec = 0;
+                question();
+
+
+            }
+        }
     }
 }
