@@ -1,12 +1,5 @@
-# C# Multiple Choice Quiz Game Tutorial
-In this project we will makea  simple quiz game in windows form. This will be a multiple choice game where you are asked a question and you have 4 variations of answers on the screen. You can use images or just text to make the quizes and you can use this a template for your own application in Visual Studio. 
+# Quiz Game in ASP.net
 
-Video Tutorial - 
+I made this program for my college practicle
 
-[![](http://img.youtube.com/vi/hQDjz2ISklw/0.jpg)](http://www.youtube.com/watch?v=hQDjz2ISklw "MOO ICT c sharp multiple choice quiz game")
-
-
-
-link
-
-https://www.mooict.com/c-tutorial-create-a-simple-multiple-choice-quiz-game-in-visual-studio/
+![image](https://github.com/yogeshwaran08/quizGame/assets/85753695/f9671e64-7b24-41b8-9c88-5295159a0b72)
